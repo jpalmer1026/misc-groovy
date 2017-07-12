@@ -17,41 +17,43 @@ class AnimationSpec extends Specification {
         result == expectedResult.toArray()
 
         where:
-        speed | init         || expectedResult
-        2     | '..R....'    || ['..X....',
-                                 '....X..',
-                                 '......X',
-                                 '.......']
-        3     | 'RR..LRL'    || ['XX..XXX',
-                                 '.X.XX..',
-                                 'X.....X',
-                                 '.......']
-        2     | 'LRLR.LRLR'  || ['XXXX.XXXX',
-                                 'X..X.X..X',
-                                 '.X.X.X.X.',
-                                 '.X.....X.',
-                                 '.........']
-        10    | 'RLRLRLRLRL' || ['XXXXXXXXXX',
-                                 '..........']
-        1     | '...'        || ['...']
-        1     | 'LRRL.LR.LRR.R.LRRL.'        || ['XXXX.XX.XXX.X.XXXX.',
-                                                 '..XXX..X..XX.X..XX.',
-                                                 '.X.XX.X.X..XX.XX.XX',
-                                                 'X.X.XX...X.XXXXX..X',
-                                                 '.X..XXX...X..XX.X..',
-                                                 'X..X..XX.X.XX.XX.X.',
-                                                 '..X....XX..XX..XX.X',
-                                                 '.X.....XXXX..X..XX.',
-                                                 'X.....X..XX...X..XX',
-                                                 '.....X..X.XX...X..X',
-                                                 '....X..X...XX...X..',
-                                                 '...X..X.....XX...X.',
-                                                 '..X..X.......XX...X',
-                                                 '.X..X.........XX...',
-                                                 'X..X...........XX..',
-                                                 '..X.............XX',
-                                                 '.X...............XX',
-                                                 'X.................X',
-                                                 '...................']
+        speed | init                  || expectedResult
+        1     | 'R.L'                 || ['X.X', '.X.', 'X.X', '...']
+        2     | '..R....'             || ['..X....',
+                                          '....X..',
+                                          '......X',
+                                          '.......']
+        3     | 'RR..LRL'             || ['XX..XXX',
+                                          '.X.XX..',
+                                          'X.....X',
+                                          '.......']
+        2     | 'LRLR.LRLR'           || ['XXXX.XXXX',
+                                          'X..X.X..X',
+                                          '.X.X.X.X.',
+                                          '.X.....X.',
+                                          '.........']
+        10    | 'RLRLRLRLRL'          || ['XXXXXXXXXX',
+                                          '..........']
+        1     | '...'                 || ['...']
+        1     | 'LRRL.LR.LRR.R.LRRL.' || ['XXXX.XX.XXX.X.XXXX.',
+                                          '..XXX..X..XX.X..XX.',
+                                          '.X.XX.X.X..XX.XX.XX',
+                                          'X.X.XX...X.XXXXX..X',
+                                          '.X..XXX...X..XX.X..',
+                                          'X..X..XX.X.XX.XX.X.',
+                                          '..X....XX..XX..XX.X',
+                                          '.X.....XXXX..X..XX.',
+                                          'X.....X..XX...X..XX',
+                                          '.....X..X.XX...X..X',
+                                          '....X..X...XX...X..',
+                                          '...X..X.....XX...X.',
+                                          '..X..X.......XX...X',
+                                          '.X..X.........XX...',
+                                          'X..X...........XX..',
+                                          '..X.............XX.',
+                                          '.X...............XX',
+                                          'X.................X',
+                                          '...................']
+
     }
 }
